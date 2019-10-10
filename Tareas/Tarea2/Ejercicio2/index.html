@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+    <div class="container">
+            <br>
+            <div class="jumbotron">
+                <h1>
+                    <center>Journal</center>
+                </h1>
+
+                <div class="form-group">
+                    <label for="carnet" >Ingrese su nombre: </label><br>
+                    <input class="form-control" type="text" name="carnet" id="nombre_field">
+                </div>
+
+                <div class="form-group">
+                    <label for="event">Seleccione evento:</label>
+                    <select name="event" class="form-control" id="event_field">
+                        <option>Comer</option>
+                        <option>Beber</option>
+                        <option>Dormir</option>
+                        <option>Ejercitarse</option>
+                        <option>Jugar</option>
+                        <option>Estudiar</option>
+                        <option>Emboracharse</option>
+                        <option>Pelear</option>
+                        <option>Charlar</option>
+                        <option>Maldecir</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Dia</label>
+                    <input class="form-control" type="date" name="date" id="date_field">
+                </div>
+
+                <div class="form-group">
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="accident_switch">
+                        <label class="custom-control-label" for="accident_switch">Accidente?</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" class="btn btn-danger" id="submit_btn" >Ingresar</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <section>
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-dark">
+                            <th scope="col">Dia</th>
+                            <th scope="col">Evento</th>
+                            <th scope="col">Accidente?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_body">
+                    </tbody>
+                </table>
+            </section>
+        </div>
+</body>
+</html>`
