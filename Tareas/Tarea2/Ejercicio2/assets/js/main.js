@@ -15,6 +15,12 @@ function addRow(event,date,time,accident,tBody){
     tBody.appendChild(newRow);
 };
 
+var journal=[];
+
+function addEntry(date,event, accident) {
+    journal.push({date,event, accident});
+}
+
 window.onload = function(){
 
     var submit_btn = document.querySelector("#submit_btn");
@@ -24,6 +30,7 @@ window.onload = function(){
     var time_field = document.querySelector("#time_field");
     var tBody = document.querySelector("#table_body");
 
+
     submit_btn.addEventListener("click", () =>{
         var event = event_field.options[event_field.selectedIndex].text;
         var accident= parseLateSwitch(accident_switch.checked);
@@ -31,5 +38,20 @@ window.onload = function(){
         var time= time_field.value;
 
         addRow(event,date,time,accident,tBody);
+
+        var flag=false;
+        for(let elemento of journal){
+            if(date===elemento.date){
+                elemento.event= elemento.event+","+event;
+                flag=true;
+                if(elemento.accident != true){
+                    elemento.accident = accident;
+                }
+            }
+        }
+        
+        if(!flag){
+            addEntry(date,event,accident);
+        }
     });
 }
