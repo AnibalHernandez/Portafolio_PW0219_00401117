@@ -33,8 +33,8 @@ function addRow(carnet,schedule,late, tBody){
 
     var cellConfirmar = document.createElement("td");
     var inputConfirmar = document.createElement("input");
+    
     inputConfirmar.id=countId;
-
     inputConfirmar.setAttribute("type","text");
     inputConfirmar.setAttribute("maxlength","8");
 
