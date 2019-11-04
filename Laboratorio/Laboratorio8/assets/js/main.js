@@ -86,6 +86,7 @@ window.onload = function(){
 
     carnet_field.addEventListener("keyup", (event)=>{
         var carnet = carnet_field.value;
+        /*Verifica si el carnet es correcto*/
         if(carnetRegex.test(carnet)){
             submit_btn.disabled=false;
         }
